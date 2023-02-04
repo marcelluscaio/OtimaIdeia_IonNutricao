@@ -1,0 +1,74 @@
+:root{
+   --gradient-1: linear-gradient(132.4deg, #7B999C 4.14%, #315C70 100%);
+
+   
+
+   --font-lato: 'Lato', sans-serif;;
+   --font-josefine: 'Josefin Sans', sans-serif;
+
+   --fontsize-1: 16px;
+
+   --fontcolor-white: #ffffff;
+
+   --icon-size: 1rem
+}
+
+/*
+   display
+   position
+   box-model (height, margin, padding, border)
+   typography
+   manipulation
+   miscelaneous
+
+
+*/
+
+.header-bar{
+   background-image: linear-gradient(132.4deg, #7B999C 4.14%, #315C70 100%);
+}
+
+.header-bar__contact{
+   display: flex;
+   gap: var(--fontsize-1);
+   
+   
+}
+
+.header-bar__contact__item,
+.header-bar__cart{
+   color: var(--fontcolor-white);
+   font-family: var(--font-josefine);
+   font-size: var(--fontsize-1);
+   font-weight: 600;
+   text-decoration: none;
+   line-height: 1.5;
+}
+
+.header-bar__contact__item::before,
+.header-bar__cart::before{
+   content: '';
+   display: inline-block;
+
+   position: relative;
+   top: calc(var(--icon-size) / 4);
+
+   width: var(--icon-size);
+   height: var(--icon-size);
+   margin-right: calc(var(--icon-size) / 2);   
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: 50% 50%;
+}
+
+.email::before{
+   background-image: url(../img/envelope.svg);
+}
+
+.phone::before{
+   background-image: url(../img/phone.svg);
+}
+
+.header-bar__cart::before{
+   background-image: url(../img/cart.svg);
+}
