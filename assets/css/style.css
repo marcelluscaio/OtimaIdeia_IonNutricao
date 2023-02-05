@@ -3,17 +3,23 @@
    --gradient-1: linear-gradient(132.4deg, #7B999C 4.14%, #315C70 100%);
    --gradient-orange: linear-gradient(135deg, #F87544 0%, #F54B0C 100%);
 
-   
-
    --font-lato: 'Lato', sans-serif;;
    --font-josefine: 'Josefin Sans', sans-serif;
 
-   --fontsize-1: 16px;
+
+   --fontsize-1: clamp(0.75rem, calc(0.73rem + 0.13vw), 0.88rem); /*14px (12px)*/
+   --fontsize-2: clamp(0.84rem, calc(0.80rem + 0.21vw), 1.05rem); /*16px (16px)*/
+   --fontsize-3: clamp(0.95rem, calc(0.89rem + 0.31vw), 1.26rem); /*20px (18px)*/
+   --fontsize-4: clamp(1.07rem, calc(0.98rem + 0.44vw), 1.51rem); /*24px (20px)*/
+   --fontsize-5: clamp(1.20rem, calc(1.08rem + 0.61vw), 1.81rem); /*29px (28px)*/
+   --fontsize-6: clamp(1.35rem, calc(1.19rem + 0.83vw), 2.18rem); /*34px (30px)*/
+   --fontsize-7: clamp(1.52rem, calc(1.30rem + 1.09vw), 2.61rem); /*41px (44px)*/
+   --fontsize-8: clamp(1.71rem, calc(1.43rem + 1.42vw), 3.14rem); /*50px (50px)*/
 
    --fontcolor-white: #FFFFFF;
    --fontcolor-blue: #315C70;
-
-   --icon-size: 1rem
+   
+   --icon-size: var(--fontsize-1)
 }
 
 /*
@@ -43,14 +49,14 @@ header{
 
 .header-bar__contact{
    display: flex;
-   gap: calc(var(--fontsize-1) * 2);
+   gap: calc(var(--fontsize-2) * 2);
 }
 
 .header-bar__contact__item,
 .header-bar__cart{
    color: var(--fontcolor-white);
    font-family: var(--font-josefine);
-   font-size: var(--fontsize-1);
+   font-size: var(--fontsize-2);
    font-weight: 600;
    text-decoration: none;
    line-height: 1.5;
@@ -107,7 +113,7 @@ header{
 .header-navigation__link{
    color: var(--fontcolor-blue);
    font-family: var(--font-lato);
-   font-size: var(--fontsize-1);
+   font-size: var(--fontsize-2);
    font-weight: 400;
    text-decoration: none;
    line-height: 1.5;
@@ -119,7 +125,7 @@ header{
    
    color: var(--fontcolor-white);
    font-family: var(--font-lato);
-   font-size: var(--fontsize-1);
+   font-size: var(--fontsize-2);
    font-weight: 400;
    text-decoration: none;
    line-height: 1.5;
