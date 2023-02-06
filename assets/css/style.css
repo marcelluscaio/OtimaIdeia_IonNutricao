@@ -85,6 +85,10 @@
    line-height: 1.5;
 }
 
+.header-bar__contact__item:first-of-type{
+   margin-left: var(--icon-size); /*Necessary to align with rest of content*/
+}
+
 .header-bar__contact__item::before,
 .header-bar__cart::before{
    content: '';
@@ -175,13 +179,38 @@
 }
 
 .banner__content__cta{
+   display: inline-block;
+
    padding: .75em 1em;
 }
 
 
 .banner__image{
+   position: relative;
+   
+   width: 30%;   
+}
 
-   width: 30%;
+.banner__image::after{
+   content: '';
+
+   position: absolute;
+   top: -5%;
+   left: 5%;   
+
+   width: 100%;
+   aspect-ratio: 1;
+   background-color: white;
+
+   border-radius: 50%;   
+}
+
+.banner__image__picture{
+   position: relative;
+   
+   z-index: 1;
+   
+   width: 100%;
    aspect-ratio: 1;
 
    border-radius: 50%;
