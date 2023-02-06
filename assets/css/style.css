@@ -46,12 +46,14 @@ body{
 
 /*UTILITY CLASS*/
 .link-button{   
+   display: inline-block;
+   
    background-image: var(--gradient-orange);
    
    color: var(--fontcolor-white);
    font-family: var(--font-opensans);
    font-size: var(--fontsize-2);
-   font-weight: 400;
+   font-weight: 300;
    text-decoration: none;
    line-height: 1.5;
 
@@ -161,9 +163,11 @@ body{
 }
 
 .banner{
-   display: flex;
+   /* display: flex;
    justify-content: space-between;
-   align-items: center;
+   align-items: center; */
+
+   min-height: 25vh;
 
    padding: var(--padding);
    padding-block: 10% 5%;
@@ -174,7 +178,13 @@ body{
 }
 
 .banner__content{
-   width: 50%;
+   position: absolute;
+   top: 50%;
+   left: 15%;
+   transform: translateY(-50%);
+   z-index: 1;
+   
+   width: 35%;
 }
 
 .banner__content__title{
@@ -253,6 +263,7 @@ body{
    position: absolute;
    top: 30%;
    left: -1%;
+   z-index: 0;
 
    animation-name: float;
    animation-duration: 15s;
@@ -277,14 +288,78 @@ body{
    }
 }
 
+
+/* INFO1 */
+
+.info1{
+   display: flex;
+   justify-content: space-between;
+   gap: 10%;
+
+   padding: var(--padding);
+   padding-block: 10vh;
+}
+
+.info__image{
+   flex: 4;
+}
+
+.info__image__content{
+   
+   
+   width: 100%;
+   border: 5px solid var(--fontcolor-blue);
+
+   object-fit: cover;
+   object-position: center;
+   border-radius: 50%;
+}
+
+.info__content{
+   flex: 5;
+}
+
+.info__content__h2,
+.info__content__p{
+   margin-bottom: 3em;
+   
+   color: var(--fontcolor-lightblue);
+   font-family: var(--font-opensans);
+   font-size: var(--fontsize-2);
+   font-weight: 400;
+}
+
+.info__content__h3{
+   color: var(--fontcolor-blue);
+   font-family: var(--font-opensans);
+   font-size: var(--fontsize-6);
+   font-weight: 300;
+   margin-bottom: 2em;
+}
+
+.info__content__button{
+   padding: 1em 1.75em
+}
+
+
+/* MEDIA QUERIES*/
+
 @media screen and (max-width: 100em) {
    :root{
       --padding: 1vh 8vw;
+   }
+
+   .banner__content{
+      left: 8%;
    }
 }
 
 @media screen and (max-width: 70em) {
    :root{
       --padding: 1vh 2vw;
+   }
+
+   .banner__content{
+      left: 2%;
    }
 }
