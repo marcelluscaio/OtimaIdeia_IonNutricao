@@ -23,7 +23,7 @@
    --fontcolor-lightblue: #8A8FB9;
    --fontcolor-orange: #F54B0C;
 
-   --padding: 1vh 8vw;
+   --padding: 1vh 15vw;
    
    --icon-size: var(--fontsize-1)
 }
@@ -38,6 +38,11 @@
 
 
 */
+/*TIRAR*/
+body{
+   height: 200vh;
+   line-height: 1.5;
+}
 
 /*UTILITY CLASS*/
 .link-button{   
@@ -151,13 +156,21 @@
 }
 
 /*BANNER*/
+.banner-container{
+   position: relative;
+}
+
 .banner{
    display: flex;
    justify-content: space-between;
    align-items: center;
 
    padding: var(--padding);
+   padding-block: 10% 5%;
    background-image: var(--gradient-lightblue);
+
+   -webkit-clip-path: polygon(100% 0, 100% 92%, 50% 100%, 0 92%, 0 0);
+   clip-path: polygon(100% 0, 100% 92%, 50% 100%, 0 92%, 0 0);
 }
 
 .banner__content{
@@ -165,6 +178,8 @@
 }
 
 .banner__content__title{
+   margin-bottom: .5em;
+   
    font-family: var(--font-opensans);
    font-size: var(--fontsize-8);
    font-weight: 300;
@@ -172,31 +187,48 @@
 }
 
 .banner__content__text{
+   margin-bottom: .75em;
+   
    font-family: var(--font-opensans);
    font-size: var(--fontsize-2);
    font-weight: 300;
    color: var(--fontcolor-lightblue);
 }
 
-.banner__content__cta{
-   display: inline-block;
+.banner__button-container{
+   display: flex;
+   gap: 5%;
+}
 
+.banner__button-container :nth-child(1){
+   flex-grow: 1;
+}
+
+.banner__button-container :nth-child(2){
+   flex-grow: 2;
+}
+
+.banner__content__cta{
    padding: .75em 1em;
+
+   text-align: center;
 }
 
 
 .banner__image{
-   position: relative;
+   position: absolute;
+   bottom: 0;
+   right: 5%;
    
-   width: 30%;   
+   width: 25%;
 }
 
 .banner__image::after{
    content: '';
 
    position: absolute;
-   top: -5%;
-   left: 5%;   
+   top: -6%;
+   left: 10%;   
 
    width: 100%;
    aspect-ratio: 1;
@@ -207,11 +239,52 @@
 
 .banner__image__picture{
    position: relative;
-   
+
    z-index: 1;
    
    width: 100%;
    aspect-ratio: 1;
 
    border-radius: 50%;
+   object-fit: cover; 
+}
+
+.molecule{
+   position: absolute;
+   top: 30%;
+   left: -1%;
+
+   animation-name: float;
+   animation-duration: 15s;
+   animation-timing-function: ease-in-out;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+}
+
+.molecule__image{
+   width: 70%;
+}
+
+@keyframes float{
+   50%{
+      transform: rotate(10deg) scale(.85);
+
+   }
+   100%{
+      top: 50%;
+      left: 1%;
+      transform: rotate(-10deg) scale(1);
+   }
+}
+
+@media screen and (max-width: 100em) {
+   :root{
+      --padding: 1vh 8vw;
+   }
+}
+
+@media screen and (max-width: 70em) {
+   :root{
+      --padding: 1vh 2vw;
+   }
 }
