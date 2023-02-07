@@ -24,6 +24,7 @@
    --fontcolor-orange: #F54B0C;
 
    --padding: 1vh 15vw;
+   --half-padding: 7.5vw;
    
    --icon-size: var(--fontsize-1)
 }
@@ -40,7 +41,6 @@
 */
 /*TIRAR*/
 body{
-   height: 200vh;
    line-height: 1.5;
 }
 
@@ -343,6 +343,40 @@ body{
    padding: 1em 1.75em
 }
 
+/* TESTIMONIALS */
+.testimonials{
+   padding-inline: var(--half-padding);
+   padding-block: 10vh;
+}
+
+.testimonials__title{
+   margin-bottom: 1em;
+
+   color: var(--fontcolor-blue);
+   font-family: var(--font-opensans);
+   font-size: var(--fontsize-5);
+   font-weight: 700;
+   text-align: center;
+   line-height: 1.2;
+}
+
+.testimonials__title--special{
+   color: var(--fontcolor-orange);
+   font-size: var(--fontsize-7);
+   font-weight: 300;
+   display: block;
+}
+
+.testimonials__description{
+   max-width: 50ch;
+   margin-inline: auto;
+   
+   color: var(--fontcolor-lightblue);
+   font-family: var(--font-opensans);
+   font-size: var(--fontsize-3);
+   font-weight: 400;
+   text-align: center;
+}
 
 /* MEDIA QUERIES*/
 
