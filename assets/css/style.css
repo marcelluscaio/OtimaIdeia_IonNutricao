@@ -41,6 +41,7 @@
 */
 /*TIRAR*/
 body{
+   font-size: var(--fontsize-2);
    line-height: 1.5;
 }
 
@@ -347,6 +348,7 @@ body{
 .testimonials{
    padding-inline: var(--half-padding);
    padding-block: 10vh;
+   background-image: var(--gradient-lightblue);
 }
 
 .testimonials__title{
@@ -368,14 +370,44 @@ body{
 }
 
 .testimonials__description{
-   max-width: 50ch;
+   max-width: 60ch;
    margin-inline: auto;
+   margin-bottom: 4em;
    
    color: var(--fontcolor-lightblue);
    font-family: var(--font-opensans);
    font-size: var(--fontsize-3);
    font-weight: 400;
    text-align: center;
+   line-height: 1.7;
+}
+
+.testimonials__cards{
+   display: flex;
+   gap: 3%;
+}
+
+.testimonials__cards__card{
+   flex: 1;
+
+   padding: 1.5em;
+   background-color: #ffffff;
+
+   box-shadow: 5px 10px 12px -10px #000000;
+   border-radius: .375em;
+}
+
+.card__text{
+   color: var(--fontcolor-lightblue);
+   font-family: var(--font-opensans);
+   font-size: var(--fontsize-3);
+   font-weight: 500;
+   line-height: 1.7;
+}
+
+.card__person{
+   display: flex;
+   align-items: center;
 }
 
 /* MEDIA QUERIES*/
