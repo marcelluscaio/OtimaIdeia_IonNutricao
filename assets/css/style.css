@@ -610,6 +610,57 @@ body{
    text-decoration: none;
 }
 
+/* CLIENT - HIGHLIGHT */
+.client-highlight{
+   padding: var(--padding);
+   padding-block: 8vh 2vh;
+
+   text-align: center;
+}
+
+.client-highlight > :not(.highlight__signature){
+   margin-bottom: .75em;
+}
+
+.highlight__image{
+   width: 8%;
+   
+   border-radius: 50%;
+}
+
+.highlight__text{
+   color: var(--fontcolor-blue);
+   font-family: var(--font-opensans);
+   font-size: var(--fontsize-5);
+   font-weight: 700;
+}
+
+.text__quotations{
+   position: relative;
+}
+
+.text__quotations::before, 
+.text__quotations::after{
+   content: '"';
+   
+   position: absolute;
+   top: 0;
+
+   font-size: var(--fontsize-8);
+}
+
+.text__quotations::before{   
+   left: -1em;
+}
+
+.text__quotations::after{   
+   right: -1em;
+}
+
+.highlight__signature{
+   color: var(--fontcolor-orange);
+   font-size: var(--fontsize-3);
+}
 
 /* MEDIA QUERIES*/
 
