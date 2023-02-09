@@ -24,8 +24,9 @@
    --fontcolor-lightblue: #8A8FB9;
    --fontcolor-orange: #F54B0C;
 
-   --padding: 1vh 15vw;
    --half-padding: 7.5vw;
+   --threequarter-padding: 10vw;
+   --padding: 1vh 15vw;
    --padding-big: 20vw;
    
    --icon-size: var(--fontsize-1)
@@ -472,7 +473,7 @@ body{
 }
 
 .explanation__title{
-   margin-bottom: 1em;
+   margin-bottom: 4em;
 
    color: var(--fontcolor-blue);
    font-family: var(--font-opensans);
@@ -532,7 +533,82 @@ body{
 
    text-align: center
 }
+ /* ADVANTAGES */
+.advantages{
+   padding-inline: var(--threequarter-padding);
+   padding-block: 15vh;
+   background-image: var(--gradient-lightblue);
+}
 
+.advantages__title{
+   margin-bottom: 4em;
+
+   color: var(--fontcolor-blue);
+   font-family: var(--font-opensans);
+   font-size: var(--fontsize-5);
+   font-weight: 700;
+   text-align: center;
+   line-height: 1.2;
+}
+
+.advantages__title--special{
+   color: var(--fontcolor-orange);
+   font-size: var(--fontsize-6);
+   font-weight: 500;
+   display: block;
+}
+
+.advantages__card-wrapper{
+   display: flex;
+   flex-wrap: wrap;
+   gap: var(--fontsize-3);
+}
+
+.advantages__card{
+   flex-grow: 1;
+   width: 20%;
+   background-color: #FFFFFF;
+}
+
+.advantages__card > *{   
+   font-family: var(--font-opensans);
+   font-weight: 400;
+}
+
+.advantages__card > img{
+   display: block;
+   
+   max-width: 100%;
+   margin-inline: auto;
+}
+
+.advantages__card > :is(h3, p, a){
+   padding-inline: 1.25rem;
+}
+
+.advantages__card > h3{
+   margin-bottom: .75em;
+   
+   color: var(--fontcolor-blue);
+   font-size: var(--fontsize-3);   
+}
+
+.advantages__card > p{
+   margin-bottom: 2.5em;
+   
+   color: var(--fontcolor-blue);
+   font-size: var(--fontsize-2);
+}
+
+.advantages__card > a{   
+   display: inline-block;
+
+   margin-bottom: 2em;
+
+   color: var(--fontcolor-orange);
+   font-size: var(--fontsize-2);   
+   text-decoration: none;
+}
 
 
 /* MEDIA QUERIES*/
