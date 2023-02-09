@@ -26,6 +26,7 @@
 
    --padding: 1vh 15vw;
    --half-padding: 7.5vw;
+   --padding-big: 20vw;
    
    --icon-size: var(--fontsize-1)
 }
@@ -433,7 +434,7 @@ body{
 }
 
 .card__person__image{
-   
+   border-radius: 50%;
 }
 
 .card__person__name, 
@@ -465,6 +466,74 @@ body{
 }
 
 /* EXPLANATION */
+.explanation{
+   padding-inline: var(--padding-big);
+   padding-block: 10vh;
+}
+
+.explanation__title{
+   margin-bottom: 1em;
+
+   color: var(--fontcolor-blue);
+   font-family: var(--font-opensans);
+   font-size: var(--fontsize-5);
+   font-weight: 700;
+   text-align: center;
+   line-height: 1.2;
+}
+
+.explanation__title--special{
+   color: var(--fontcolor-orange);
+   font-size: var(--fontsize-6);
+   font-weight: 300;
+   display: block;
+}
+
+.explanation__list{
+   display: flex;
+   justify-content: center;
+   gap: 7%;
+}
+
+.explanation__list__item{
+   flex: 1;
+
+   margin-bottom: 10%;
+
+   text-align: center;
+}
+
+.explanation__list__item > figure{
+   margin-bottom: 15%;
+}
+
+.explanation__list__item > h3{
+   margin-bottom: .5em;
+   
+   color: var(--fontcolor-blue);
+   font-family: var(--font-opensans);
+   font-size: var(--fontsize-3);
+   font-weight: 400;
+}
+
+.explanation__list__item > p{
+   color: var(--fontcolor-blue);
+   font-family: var(--font-opensans);
+   font-size: var(--fontsize-1);
+   font-weight: 400;
+}
+
+.explanation__link{
+   display: block;
+
+   width: min(25%, 20ch);
+   padding-block: .75em;
+   margin-inline: auto;
+
+   text-align: center
+}
+
+
 
 /* MEDIA QUERIES*/
 
