@@ -7,6 +7,7 @@
    --font-lato: 'Lato', sans-serif;;
    --font-josefine: 'Josefin Sans', sans-serif;
    --font-opensans: 'Open Sans', sans-serif;
+   --font-cursive: 'Lily Script One', cursive;
 
 
    --fontsize-1: clamp(0.75rem, calc(0.73rem + 0.13vw), 0.88rem); /*14px (12px)*/
@@ -390,14 +391,34 @@ body{
 .testimonials__cards__card{
    flex: 1;
 
-   padding: 1.5em;
+   position: relative;
+
+   padding: 7.5em 1.5em 1.5em;
    background-color: #ffffff;
 
    box-shadow: 5px 10px 12px -10px #000000;
    border-radius: .375em;
 }
 
+.testimonials__cards__card::before{
+   content: '"';
+
+   display: inline-block;
+
+   position: absolute;
+   top: var(--fontsize-2);
+   left: var(--fontsize-2);
+
+   color: var(--fontcolor-orange);
+   font-size: var(--fontsize-8);
+   font-family: var(--font-cursive);
+
+   transform: translate(50%, -75%) scale(3) rotate(180deg);
+}
+
 .card__text{
+   margin-bottom: 1em;
+   
    color: var(--fontcolor-lightblue);
    font-family: var(--font-opensans);
    font-size: var(--fontsize-3);
@@ -408,6 +429,39 @@ body{
 .card__person{
    display: flex;
    align-items: center;
+   gap: 2%;
+}
+
+.card__person__image{
+   
+}
+
+.card__person__name, 
+.card__person__rating{
+   font-family: var(--font-opensans);
+   font-size: var(--fontsize-3);
+   font-weight: 700;
+}
+
+.card__person__rating{
+   display: flex;
+   align-items: center;
+
+   margin-left: auto;
+}
+
+.card__person__rating::before{
+   content: '';
+
+   display: inline-block;
+
+   width: var(--fontsize-3);
+   height: var(--fontsize-3);
+   margin-right: calc(var(--fontsize-3) / 2);
+   background-image: url(../img/star.svg);
+   background-size: contain;
+   background-position: center;
+   background-repeat: no-repeat;
 }
 
 /* MEDIA QUERIES*/
