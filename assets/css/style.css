@@ -59,7 +59,6 @@ body{
    font-size: var(--fontsize-2);
    font-weight: 300;
    text-decoration: none;
-   line-height: 1.5;
 
    border-radius: .25em;
 }
@@ -660,6 +659,102 @@ body{
 .highlight__signature{
    color: var(--fontcolor-orange);
    font-size: var(--fontsize-3);
+}
+
+/* INVITATION */
+.invitation{
+   display: flex;
+   
+   padding: var(--padding);
+   padding-block: 8vh;
+   background-image: var(--gradient-lightblue);
+}
+.invitation > * {
+   flex: 1;
+}
+
+.invitation__text > h2{
+   margin-bottom: .5em;
+
+   color: var(--fontcolor-blue);
+   font-family: var(--font-opensans);
+   font-size: var(--fontsize-6);
+   font-weight: 300;
+}
+
+.invitation__text > h2 > span{
+   display: block;
+
+   background: var(--gradient-blue);
+   -webkit-background-clip: text;
+   background-clip: text;
+   
+   color: transparent;
+   font-size: var(--fontsize-5);
+   font-weight: 700;
+}
+
+.invitation__text > p{
+   max-width: 75%;
+   margin-bottom: 1em;
+   
+   color: var(--fontcolor-blue);
+   font-family: var(--font-opensans);
+   font-size: var(--fontsize-2);
+   line-height: 1.7;
+}
+
+.invitation__text > ul{
+   display: flex;
+   flex-wrap: wrap;
+
+   margin-bottom: 1.5em;
+}
+
+.invitation__text > ul > li{
+   display: flex;
+   align-items: center;
+   
+   width: 50%;
+
+   color: var(--fontcolor-blue);
+   font-family: var(--font-lato);
+   font-size: var(--fontsize-2);
+   line-height: 1.8;
+}
+
+.invitation__text > ul > li::before{
+   content: '';
+
+   display: inline-block;
+
+   width: 1.5em;
+   height: 100%;
+   background-image: url(../img/check.svg);
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+
+.invitation__text > a{
+   width: 40%;
+   padding-block: 1.25em;
+
+   text-align: center;
+}
+
+.invitation__cards > ul{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 1.25em 2em;
+}
+
+.invitation__cards > ul > li{
+   width: 28%;
+}
+
+.invitation__cards > ul > li > img{
+   max-width: 100%;
 }
 
 /* MEDIA QUERIES*/
