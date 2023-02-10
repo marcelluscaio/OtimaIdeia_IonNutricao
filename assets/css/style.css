@@ -21,6 +21,7 @@
 
    --fontcolor-white: #FFFFFF;
    --fontcolor-blue: #315C70;
+   --fontcolor-darkblue: #1D3178;
    --fontcolor-lightblue: #8A8FB9;
    --fontcolor-orange: #F54B0C;
 
@@ -819,6 +820,16 @@ body{
    transition: top 1s ease-in-out, left 1s ease-in-out;
 }
 
+/* 
+Muda a label de lugar se:  
+1) Tem foco no input
+2) O input não está vazio (não está mostrando o placeholder, que é uma string vazia)
+*/
+.lead-capture__form__field:has(:is(input:focus, input:not(:placeholder-shown))) > label{
+   top: calc(100% + .25em);
+   left: 0;
+}
+
 .lead-capture__form__field > input{
    box-sizing: border-box;
    width: 100%;
@@ -833,12 +844,7 @@ body{
 }
 
 .lead-capture__form__field > :is(input:focus,  input:hover){
-   border: 2px solid currentColor;
-}
-
-.lead-capture__form__field:has(:is(input:focus)) > label{
-   top: calc(100% + .25em);
-   left: 0;
+   outline: 1px solid currentColor;
 }
 
 .lead-capture__form > button{
@@ -867,7 +873,169 @@ body{
 
    box-shadow: 0 0 5px -1px var(--fontcolor-orange);
 }
+ /* CONTACT */
+.contact{
+   padding-inline: var(--padding-big);
+   padding-block: 8vh 12vh;
+}
 
+.contact > h2{
+   margin-bottom: 3.5em;
+
+   color: var(--fontcolor-blue);
+   font-family: var(--font-opensans);
+   font-size: var(--fontsize-5);
+   font-weight: 700;  
+   line-height: 1.2;
+   text-align: center;
+}
+
+.contact > h2 > span{
+   display: block;
+
+   background: var(--gradient-orange);
+   -webkit-background-clip: text;
+   background-clip: text;
+   
+   color: transparent;   
+   font-size: var(--fontsize-6);
+   font-weight: 300;  
+}
+
+.contact__content-wrapper{
+   display: flex;
+}
+
+.contact__content-wrapper > *{
+   flex: 1;
+}
+
+.contact__address > h3{
+   margin-bottom: 1.5em;
+   
+   color: var(--fontcolor-darkblue);
+   font-family: var(--font-opensans);
+   font-size: var(--fontsize-6);
+   font-weight: 300;
+}
+
+.contact__address > h4{
+   margin-bottom: 1em;
+
+   color: var(--fontcolor-darkblue);
+   font-family: var(--font-opensans);
+   font-size: var(--fontsize-3);
+}
+
+.contact__address :is(li, p) {
+   color: var(--fontcolor-lightblue);
+   font-family: var(--font-josefine);
+   font-size: var(--fontsize-2);
+}
+
+.contact__address > ul{
+   margin-bottom: 3.5em;
+}
+
+.contact__form{
+   padding-inline: 2%;
+}
+
+.contact__form > h3{
+   margin-bottom: 1.125em;
+
+   color: var(--fontcolor-darkblue);
+   font-family: var(--font-josefine);
+   font-size: var(--fontsize-4);
+   font-weight: 700;
+}
+
+.contact__form__field{
+   position: relative;
+
+   margin-bottom: 2em;
+}
+
+.contact__form__field:nth-last-child(2){
+   margin-bottom: 2.5em;
+}
+
+.contact__form__field > label{
+   position: absolute;
+   top: .625em;
+   left: 1em;
+
+   color: var(--fontcolor-lightblue);
+   font-family: var(--font-lato);
+   font-size: var(--fontsize-2);
+   line-height: 1.75;
+
+   transition: top 1s ease-in-out, left 1s ease-in-out;
+}
+
+.contact__form__field:has(:is(input:focus, input:not(:placeholder-shown), textarea:focus, textarea:not(:placeholder-shown))) > label{
+   top: calc(-1 * (var(--fontsize-2) * 1.5));
+   left: 0;
+}
+
+.contact__form__field > :is(input, textarea){
+   box-sizing: border-box;
+   width: 100%;
+   padding-block: .625em;
+   padding-left: 1em;
+   background: var(--gradient-lightblue) padding-box, var(--gradient-blue) border-box;
+   outline: none;
+   border: 1px solid transparent;
+   /*
+    Comparar com técnica para border gradient usada no outro form. A outra não permite border-radius
+    
+    */
+   
+   color: var(--fontcolor-lightblue);
+   font-family: var(--font-lato);
+   font-size: var(--fontsize-2);
+   line-height: 1.5;
+
+   /* Padding-block x 2 + tamanho da fonte com line-height /  */
+   border-radius: calc(((.625em * 2) + (var(--fontsize-2) * 1.5)) / 10);
+}
+
+.contact__form__field > textarea{
+   min-height: calc(var(--fontsize-2) * 10);
+
+   resize: vertical;
+}
+
+.contact__form__field > :is(:is(input, textarea):focus,  :is(input, textarea):hover){
+   outline: 1px solid var(--fontcolor-blue);
+}
+
+.contact__form > button{
+   padding: .5em 2em;
+   border: none;
+   outline: none;
+   background-image: var(--gradient-orange);
+   
+   color: var(--fontcolor-white);
+   font-family: var(--font-opensans);
+   font-size: var(--fontsize-2);
+
+   cursor: pointer;
+   border-radius: calc((1em + var(--fontsize-2)) / 10);
+}
+
+.contact__form > :is(button:focus,  button:hover){
+   -webkit-background-clip: text;
+   background-clip: text;
+
+   border-width: 1px;
+   border-style: solid;
+   border-image: var(--gradient-orange) 1;   
+   
+   color: transparent;
+
+   box-shadow: 0 0 5px -1px var(--fontcolor-orange);
+}
 
 
 /* MEDIA QUERIES*/

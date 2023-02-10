@@ -37,10 +37,10 @@
       </div>      
    </header>
    <main>
-      <div class="banner-container">
-         <section class="banner">
+      <section class="banner-container">
+         <div class="banner">
                     
-         </section>
+         </div>
          <figure class="molecule">
             <img class="molecule__image" src="assets/img/molecula.png" />
          </figure>
@@ -56,8 +56,7 @@
             <img class="banner__image__picture" src="assets/img/carrossel1.jpg" alt="...">
          </figure>
          
-      </div>
-
+      </section>
       <section class="info">
          <figure class="info__image">
             <img class="info__image__content" src="assets/img/books.jpg" />
@@ -226,16 +225,56 @@
             <p class="lead-capture__text">Cada um de nós apresenta uma assinatura bioquímico metabólica, tão individual quanto nossas impressões digitais. Por outro lado, nosso metabolismo é altamente dinâmico, vivendo sob interferência de fatores externos e internos,  como gênero, idade, fatores genéticos e epigenéticos, estilo de vida, composição da microbiota, dieta e exposição ao meio ambiente.</p>
             <form class="lead-capture__form">
                <div class="lead-capture__form__field">
-                  <label>Nome</label>
-                  <input type="text" />
+                  <label for="name">Nome</label>
+                  <input type="text" id="name" placeholder=" " required/>
                </div>
                <div class="lead-capture__form__field">
-                  <label>Email</label>
-                  <input type="email" />
+                  <label for="email">Email</label>
+                  <input type="email" id="email" placeholder=" " required />
                </div>
                <button>Baixar PDF</button>
             </form>
          </article>
+      </section>
+      <section class="contact">
+         <h2>Entre em <span>Contato</span></h2>
+         <div class="contact__content-wrapper">
+            <address class="contact__address">
+               <h3>Informações Gerais</h3>
+               <h4>Telefone /  Whatsapp</h4>
+               <ul>
+                  <li>(11) 3164-1214</li>
+                  <li>(11) 9 1081-3015</li>
+               </ul>
+               <h4>Email</h4>
+               <ul>
+                  <li>claudia.gomes@ionnutri.com.br</li>
+                  <li>contato@ionnutri.com.br</li>
+               </ul>
+               <h4>Localização</h4>
+               <p>Rua Apiacás, 247, sobreloja, Perdizes, São Paulo, SP.</p>
+            </address>
+            <form class="contact__form">
+               <h3>Mande sua mensagem</h3>
+               <div class="contact__form__field">
+                  <label for="name-contact">Nome</label>
+                  <input type="text" id="name-contact" placeholder=" " />
+               </div>
+               <div class="contact__form__field">
+                  <label for="email-contact">Email</label>
+                  <input type="email" id="email-contact" placeholder=" " />
+               </div>
+               <div class="contact__form__field">
+                  <label for="subject-contact">Assunto</label>
+                  <input type="text" id="subject-contact" placeholder=" " />
+               </div>
+               <div class="contact__form__field">
+                  <label for="message-contact">Mensagem</label>
+                  <textarea id="message-contact" placeholder=" " ></textarea>
+               </div>
+               <button>Enviar</button>
+            </form>
+         </div>
       </section>
    </main>
    
