@@ -740,6 +740,7 @@ body{
    padding-block: 1.25em;
 
    text-align: center;
+   text-transform: uppercase;
 }
 
 .invitation__cards > ul{
@@ -756,6 +757,118 @@ body{
 .invitation__cards > ul > li > img{
    max-width: 100%;
 }
+
+/* LEAD CAPTURE */
+.lead-capture{
+   display: flex;
+   align-items: center;
+   gap: 12%;
+   
+   padding: var(--padding);
+   padding-block: 8vh;
+}
+
+.lead-capture__image{
+   width: 30%;
+}
+
+.lead-capture__title{
+   margin-bottom: .75em;
+   
+   color: var(--fontcolor-blue);
+   font-family: var(--font-opensans);
+   font-size: var(--fontsize-6);
+   font-weight: 300;   
+}
+
+.lead-capture__title--highlight{
+   color: var(--fontcolor-orange);
+}
+
+.lead-capture__text{
+   margin-bottom: 1.25em;
+   
+   color: var(--fontcolor-lightblue);
+   font-family: var(--font-opensans);
+   font-size: var(--fontsize-2);
+   font-weight: 300;
+}
+
+.lead-capture__form{
+   display: flex;
+   gap: 1%;
+}
+
+.lead-capture__form > *{
+   flex: 1;
+}
+
+.lead-capture__form__field{
+   position: relative;
+}
+
+.lead-capture__form__field > label{
+   position: absolute;
+   top: .25em;
+   left: 1em;
+
+   color: var(--fontcolor-orange);
+   font-family: var(--font-opensans);
+   font-size: var(--fontsize-2);
+
+   transition: top 1s ease-in-out, left 1s ease-in-out;
+}
+
+.lead-capture__form__field > input{
+   box-sizing: border-box;
+   width: 100%;
+   padding-block: .25em;
+   padding-left: 1em;
+   border: 1px solid currentColor;
+   outline: none;
+   
+   color: var(--fontcolor-orange);
+   font-family: var(--font-opensans);
+   font-size: var(--fontsize-2);
+}
+
+.lead-capture__form__field > :is(input:focus,  input:hover){
+   border: 2px solid currentColor;
+}
+
+.lead-capture__form__field:has(:is(input:focus)) > label{
+   top: calc(100% + .25em);
+   left: 0;
+}
+
+.lead-capture__form > button{
+   padding-block: .25em;
+   border: none;
+   outline: none;
+   background-image: var(--gradient-orange);
+   
+   color: var(--fontcolor-white);
+   font-family: var(--font-opensans);
+   font-size: var(--fontsize-2);
+   text-transform: uppercase;
+
+   cursor: pointer;
+}
+
+.lead-capture__form > :is(button:focus,  button:hover){
+   -webkit-background-clip: text;
+   background-clip: text;
+
+   border-width: 1px;
+   border-style: solid;
+   border-image: var(--gradient-orange) 1;   
+   
+   color: transparent;
+
+   box-shadow: 0 0 5px -1px var(--fontcolor-orange);
+}
+
+
 
 /* MEDIA QUERIES*/
 
