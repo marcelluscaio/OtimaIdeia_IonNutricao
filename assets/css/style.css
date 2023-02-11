@@ -66,7 +66,7 @@ body{
 
 .invert-button{
    border: 1px solid var(--fontcolor-orange);
-   background-image: var(--bg-color-white);
+   background: var(--bg-color-white);
    
    color: var(--fontcolor-orange);
 }
@@ -387,7 +387,7 @@ body{
 
 .testimonials__cards{
    display: flex;
-   gap: 3%;
+   gap: 3%; /* Atenção */
 }
 
 .testimonials__cards__card{
@@ -565,9 +565,15 @@ body{
 }
 
 .advantages__card{
+   position: relative;
+   
    flex-grow: 1;
    width: 20%;
+   --padding-bottom: 1em;
+   padding-bottom: var(--padding-bottom);
    background-color: #FFFFFF;
+
+   
 }
 
 .advantages__card > *{   
@@ -603,7 +609,10 @@ body{
 .advantages__card > a{   
    display: inline-block;
 
-   margin-bottom: 2em;
+   position: absolute;
+   bottom: var(--padding-bottom);
+
+   /* margin-bottom: 2em; Isso estava aqui seguindo o layout original */
 
    color: var(--fontcolor-orange);
    font-size: var(--fontsize-2);   
@@ -816,6 +825,7 @@ body{
    color: var(--fontcolor-orange);
    font-family: var(--font-opensans);
    font-size: var(--fontsize-2);
+   line-height: 1.5;
 
    transition: top 1s ease-in-out, left 1s ease-in-out;
 }
@@ -841,6 +851,7 @@ Muda a label de lugar se:
    color: var(--fontcolor-orange);
    font-family: var(--font-opensans);
    font-size: var(--fontsize-2);
+   line-height: 1.5;
 }
 
 .lead-capture__form__field > :is(input:focus,  input:hover){
@@ -968,7 +979,7 @@ Muda a label de lugar se:
    color: var(--fontcolor-lightblue);
    font-family: var(--font-lato);
    font-size: var(--fontsize-2);
-   line-height: 1.75;
+   line-height: 1.5;
 
    transition: top 1s ease-in-out, left 1s ease-in-out;
 }
@@ -1035,6 +1046,95 @@ Muda a label de lugar se:
    color: transparent;
 
    box-shadow: 0 0 5px -1px var(--fontcolor-orange);
+}
+
+/* FOOTER */
+.footer-top{
+   display: flex;
+   align-items: flex-start;
+   gap: 2%;
+   
+   padding: var(--padding);
+   padding-block: 5vh;
+   background-image: var(--gradient-lightblue);
+}
+
+.footer-top > *{
+   flex: 1;
+}
+
+.footer-top img{
+   max-width: 100%;
+   height: auto;
+}
+
+.footer-top > * > h2{
+   margin-bottom: 1.625em;
+   
+   color: #000000;
+   font-family: var(--font-josefine);
+   font-size: var(--fontsize-4);
+   font-weight: 600;
+}
+
+.footer-top :is(li, p){
+   margin-bottom: 1em;
+   
+   color: var(--fontcolor-lightblue);
+   font-family: var(--font-opensans);
+   font-size: var(--fontsize-2);
+}
+
+.footer-top iframe{
+   display: block;
+
+   width: 100%;
+   min-height: 20vh;
+   margin-bottom: var(--fontsize-2);
+}
+
+.footer-top a:not(.invert-button){
+   text-decoration: none;
+   color: inherit;
+}
+
+.footer-top .invert-button{
+   width: 100%;
+   padding-block: .5em;
+
+   text-align: center;
+}
+
+.footer-bottom{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   
+   padding: var(--padding);
+   padding-block: 1vh;
+   background-image: var(--gradient-blue);
+}
+
+.footer-bottom > span{
+   color: var(--bg-color-white);
+   font-family: var(--font-lato);
+   font-size: var(--fontsize-2);
+   font-weight: 600;
+}
+
+.footer-bottom > ul{
+   display: flex;
+   align-items: center;
+   gap: 3vw;
+}
+
+:has( > .footer-bottom__social-icon){
+   display: flex;
+}
+
+.footer-bottom__social-icon{
+   width: var(--fontsize-6);
+   height: auto;
 }
 
 
