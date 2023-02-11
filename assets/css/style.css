@@ -27,7 +27,7 @@
 
    --half-padding: 7.5vw;
    --threequarter-padding: 10vw;
-   --padding: 1vh 15vw;
+   --padding: 1vh 15vw;/* min(15vw, var(--fontsize-1)) x width min(85%, 85rem)*/
    --padding-big: 20vw;
    
    --icon-size: var(--fontsize-1)
