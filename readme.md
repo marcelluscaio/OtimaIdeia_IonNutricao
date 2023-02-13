@@ -13,11 +13,11 @@ Website's home for an expert on nutrition.
 
 ## Features
 
-:gear: Animation on molecule
-Header with animated underline on hover
-Pentagon-shaped section 
-Forms built with animated label as placeholder 
-Responsive design
+:gear: Animation on molecule; <br>
+:on: Header with animated underline on hover; <br>
+:five: Pentagon-shaped section; <br>
+:label: Forms built with animated label as placeholder; <br>
+:iphone: Responsive design; <br>
 :fountain_pen: Tipografia fluida
 
 ## Some techniques used
@@ -120,4 +120,10 @@ This project was built as a test for a position in a digital marketing agency.
 <p align="middle">
 <img src="assets/img/mobile.png" width="50%" height="100%">
 <img src="assets/img/desktop.png" width="100%" height="100%">
+</p>
+
+## Performance report
+
+<p align="middle">
+<img src="assets/img/report.png" width="100%" height="100%">
 </p>
