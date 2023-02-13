@@ -39,7 +39,9 @@
 
    /* explorar min(15vw, var(--fontsize-1)) x width min(85%, 85rem)*/
    
-   --icon-size: var(--fontsize-1)
+   --icon-size: var(--fontsize-1);
+
+   --underlineWidth: 8%;
 }
 
 /*
@@ -164,6 +166,22 @@ body{
    font-weight: 400;
    text-decoration: none;
    line-height: 1.5;
+}
+
+:has( > .header-navigation__underline){
+   position: relative;
+}
+
+.header-navigation__underline{
+   position: absolute;
+
+   
+
+   height: 2px;
+   width: var(--underlineWidth);
+   background-color: var(--fontcolor-orange);
+   bottom: 0;
+   left: 0;
 }
 
 .header-navigation__cta{
