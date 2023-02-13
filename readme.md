@@ -4,7 +4,7 @@ Website's home for an expert on nutrition.
 
 ## Access
 
-<a href="https://nutriweb-caiocabral.vercel.app/">Acesse a aplicação clicando aqui</a>.
+<a href="https://nutriweb-caiocabral.vercel.app/">Access the website</a>.
 
 ## Built with:
 
