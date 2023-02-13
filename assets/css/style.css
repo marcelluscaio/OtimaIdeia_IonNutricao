@@ -343,6 +343,7 @@ body{
 
 .info__image{
    flex: 4;
+   max-width: 100%;
 
    position: relative;
 }

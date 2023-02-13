@@ -4,7 +4,7 @@ Website's home for an expert on nutrition.
 
 ## Access
 
-<a href="https://pomodoro-caio.vercel.app/">Acesse a aplicação clicando aqui</a>.
+<a href="https://nutriweb-caiocabral.vercel.app/">Acesse a aplicação clicando aqui</a>.
 
 ## Built with:
 
@@ -118,6 +118,6 @@ This project was built as a test for a position in a digital marketing agency.
 
 ## Screenshots
 <p align="middle">
-<img src="img/mobile.png" width="50%" height="100%">
-<img src="img/desktop.png" width="100%" height="100%">
+<img src="assets/img/mobile.png" width="50%" height="100%">
+<img src="assets/img/desktop.png" width="100%" height="100%">
 </p>
