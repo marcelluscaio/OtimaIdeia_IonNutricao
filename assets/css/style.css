@@ -193,8 +193,6 @@ body{
 /*BANNER*/
 .banner-container{
    position: relative;
-
-   padding-inline: var(--padding);
 }
 
 .banner__bg{
@@ -205,21 +203,21 @@ body{
    background-image: var(--gradient-lightblue);
    z-index: -1;
 
-   -webkit-clip-path: polygon(100% 0, 100% 92%, 50% 100%, 0 92%, 0 0);
-   clip-path: polygon(100% 0, 100% 92%, 50% 100%, 0 92%, 0 0);
+   -webkit-clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+   clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
 }
 
 .banner__content-wrapper{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   padding-inline: var(--padding);
+   padding-block: 10vh 2vh;
 }
 
-.banner__content{
-/*    position: absolute;
-   top: 50%;
-   left: var(--basepadding);
-   transform: translateY(-50%);
-   z-index: 1; */
-   
-   width: 35%;
+.banner__content-wrapper > *{
+   flex: 1;
 }
 
 .banner__content__title{
@@ -259,12 +257,14 @@ body{
    text-align: center;
 }
 
+:has( > .banner__image){
+   transform: scale(1.1) translateX(20%);
+}
+
 .banner__image{
-   position: absolute;
-   bottom: 0;
-   right: calc(var(--basepadding) * 2 / 3);
+   position: relative;
    
-   width: 25%;
+   width: 100%;
 }
 
 .image-shadow::after{
@@ -1178,6 +1178,10 @@ Muda a label de lugar se:
 @media screen and (max-width: 100em) {
    :root{
       --basepadding: 8vw;
+   }
+
+   :has( > .banner__image){
+      transform: scale(1) translateX(10%);
    }
 
    .image-shadow::after{
