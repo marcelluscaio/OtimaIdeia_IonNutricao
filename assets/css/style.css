@@ -1,3 +1,8 @@
+/* Fazer a versão tablet e celular */
+   /* Refazer sessão Banner (div com o cli pathe,e  outra div por cima dela */
+   /* Fazer interações: hover etc */
+   /* Fazer padding para botões (quando width diminui, gruda na lateral */ 
+
 :root{
    --bg-color-white: #FFFFFF;
    --gradient-blue: linear-gradient(132.4deg, #7B999C 4.14%, #315C70 100%);
@@ -25,10 +30,14 @@
    --fontcolor-lightblue: #8A8FB9;
    --fontcolor-orange: #F54B0C;
 
-   --half-padding: 7.5vw;
-   --threequarter-padding: 10vw;
-   --padding: 1vh 15vw;/* min(15vw, var(--fontsize-1)) x width min(85%, 85rem)*/
-   --padding-big: 20vw;
+
+   --basepadding: 19.25vw;
+   --half-padding: calc(var(--basepadding) / 2);
+   --threequarter-padding: calc(var(--basepadding) * 3 / 4);
+   --padding: 1vh var(--basepadding); 
+   --padding-big: calc(var(--basepadding) * 4 / 3);
+
+   /* explorar min(15vw, var(--fontsize-1)) x width min(85%, 85rem)*/
    
    --icon-size: var(--fontsize-1)
 }
@@ -83,7 +92,7 @@ body{
 
 .header-bar__contact{
    display: flex;
-   gap: calc(var(--fontsize-2) * 2);
+   gap: calc(var(--fontsize-2) * 2);   
 }
 
 .header-bar__contact__item,
@@ -179,7 +188,7 @@ body{
 .banner__content{
    position: absolute;
    top: 50%;
-   left: 15%;
+   left: var(--basepadding);
    transform: translateY(-50%);
    z-index: 1;
    
@@ -223,11 +232,10 @@ body{
    text-align: center;
 }
 
-
 .banner__image{
    position: absolute;
    bottom: 0;
-   right: 5%;
+   right: calc(var(--basepadding) * 2 / 3);
    
    width: 25%;
 }
@@ -266,14 +274,14 @@ body{
    z-index: 0;
 
    animation-name: float;
-   animation-duration: 15s;
+   animation-duration: 10s;
    animation-timing-function: ease-in-out;
    animation-iteration-count: infinite;
    animation-direction: alternate;
 }
 
 .molecule__image{
-   width: 70%;
+   width: calc(var(--basepadding) * 4 / 5);
 }
 
 @keyframes float{
@@ -311,9 +319,7 @@ body{
 }
 
 .info__image__content{
-   
-   
-   width: 100%;
+   width: 98%;
    border: 5px solid var(--fontcolor-blue);
 
    object-fit: cover;
@@ -1135,6 +1141,8 @@ Muda a label de lugar se:
 .footer-bottom__social-icon{
    width: var(--fontsize-6);
    height: auto;
+
+   cursor: pointer;
 }
 
 
@@ -1142,20 +1150,26 @@ Muda a label de lugar se:
 
 @media screen and (max-width: 100em) {
    :root{
-      --padding: 1vh 8vw;
+      --basepadding: 8vw;
    }
 
-   .banner__content{
-      left: 8%;
+   .image-shadow::after{
+      left: 2%;
+   }
+
+   .text__quotations::before{   
+      left: -.25em;
+   }
+
+   .text__quotations::after{   
+      right: -.25em;
    }
 }
 
-@media screen and (max-width: 70em) {
+@media screen and (max-width: 50em) {
    :root{
-      --padding: 1vh 2vw;
+      --basepadding: 2vw;
    }
 
-   .banner__content{
-      left: 2%;
-   }
+   
 }
