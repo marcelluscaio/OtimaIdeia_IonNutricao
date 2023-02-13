@@ -18,7 +18,7 @@ Website's home for an expert on nutrition.
 :five: Pentagon-shaped section; <br>
 :label: Forms built with animated label as placeholder; <br>
 :iphone: Responsive design; <br>
-:fountain_pen: Tipografia fluida
+:fountain_pen: Fluid typography
 
 ## Some techniques used
 
