@@ -1,6 +1,6 @@
    /* Fazer a versão tablet e celular */
-   /* Refazer sessão Banner (div com o clip path, e  outra div por cima dela */
    /* Fazer padding para botões (quando width diminui, gruda na lateral */
+   /* Moleculas*/
 
 :root{
    --bg-color-white: #FFFFFF;
@@ -90,6 +90,25 @@ body{
    background-image: var(--gradient-blue);
 }
 
+.menu-checkbox, .nav-checkbox{
+   position: absolute;
+   left: -100%;
+
+   opacity: 0;
+}
+
+.menu-checkbox:checked ~ .header-bar__contact{
+   transform: scaleY(1);
+   filter: opacity(1);
+}
+
+:is(.menu-checkbox, .nav-checkbox) + label{
+   position: absolute;
+   left: -100%;
+
+   opacity: 0;
+}
+
 .header-bar__contact{
    display: flex;
    gap: calc(var(--fontsize-2) * 2);   
@@ -154,6 +173,11 @@ body{
    height: var(--fontsize-8);
    
    object-fit: cover;
+}
+
+.header-navigation:has(.nav-checkbox:checked) > nav{
+   transform: scaleY(1);
+   filter: opacity(1);
 }
 
 .header-navigation__items{
@@ -1199,8 +1223,145 @@ Muda a label de lugar se:
 
 @media screen and (max-width: 50em) {
    :root{
-      --basepadding: 2vw;
+      --basepadding: 6vw;
    }
 
+   .header-bar, 
+   .header-navigation{
+      position: relative;
+   }
+
+   .header-bar{
+      justify-content: center;
+   }
+
+   .header-bar__contact,
+   .header-bar__cart{
+      background-image: var(--gradient-blue);
+   }
+
+   .header-bar__contact,
+   .header-bar__cart{
+      flex-direction: column;
+      align-items: center;
+      
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+
+      z-index: 1;
+      
+      transform: scaleY(0);
+      transform-origin: top;
+      filter: opacity(0);
+
+      transition: transform 1s ease-in-out, filter 2s ease-in-out;
+   }
+
+   :is(.menu-checkbox, .nav-checkbox) + label{
+      position: relative;
+      left: unset;
+
+      opacity: 1;
+   }
+
+   .menu-checkbox + label{
+      font-size: var(--fontsize-2);
+      color: var(--fontcolor-white);
+      font-family: var(--font-josefine);
+      font-weight: 600;
+   }
+
+   .nav-checkbox + label{
+      font-size: var(--fontsize-2);
+      color: var(--fontcolor-blue);
+      font-family: var(--font-josefine);
+      font-weight: 600;
+   }
+
+   .header-navigation{
+      justify-content: space-between;
+   }
+
+   .header-navigation > :is(nav, a){
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+
+      z-index: 1;
+      
+      transform: scaleY(0);
+      transform-origin: top;
+      filter: opacity(0);
+
+      transition: transform 1s ease-in-out, filter 2s ease-in-out;
+   }
+
+   .header-navigation > nav{
+      background-color: #FFFFFF;
+   }
+
+   .header-navigation > nav > ul{
+      align-items: center;
+   }         
+
+   .header-navigation__items{
+      flex-direction: column;
+   }
+
+   .header-navigation__underline{
+      display: none;
+   }
+
+   .header-navigation__logo{
+      width: 25%;
+   }
+
+   .banner__content-wrapper{
+      flex-direction: column-reverse;
+   }
+
+   :has( > .banner__image){
+      transform: scale(1) translateX(0);
+   }
+
+   .info{
+      flex-direction: column;
+   }
+
+   .info-blue{
+      flex-direction: column-reverse;
+   }
+
+   .testimonials__cards{
+      flex-direction: column;
+      gap: 5vh;
+   }
+
+   .advantages__card-wrapper{
+      flex-direction: column;
+   }
+
+   .advantages__card{
+      width: 100%;
+   }
+
+   .invitation{
+      flex-direction: column;
+   }
+
+   .lead-capture{
+      flex-direction: column;
+   }
+
+   .contact__content-wrapper{
+      flex-direction: column;
+   }
+
+   .footer-top{
+      flex-direction: column;
+   }
    
 }
