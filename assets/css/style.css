@@ -584,7 +584,7 @@ body{
 .explanation__link{
    display: block;
 
-   width: min(25%, 20ch);
+   width: min(40%, 20ch);
    padding-block: .75em;
    margin-inline: auto;
 
@@ -805,6 +805,7 @@ body{
 .invitation__text > a{
    width: 40%;
    padding-block: 1.25em;
+   padding-inline: .75em;
 
    text-align: center;
    text-transform: uppercase;
@@ -1327,8 +1328,18 @@ Muda a label de lugar se:
       transform: scale(1) translateX(0);
    }
 
+   .banner__button-container{
+      flex-direction: column;
+      gap: 3vh;
+   }
+
    .info{
       flex-direction: column;
+      gap: 5vh;
+   }
+
+   .info :is(h2, h3){
+      text-align: center;
    }
 
    .info-blue{
@@ -1340,6 +1351,10 @@ Muda a label de lugar se:
       gap: 5vh;
    }
 
+   .explanation__list{
+      flex-direction: column;
+   }
+
    .advantages__card-wrapper{
       flex-direction: column;
    }
@@ -1348,8 +1363,52 @@ Muda a label de lugar se:
       width: 100%;
    }
 
+   .highlight__image{
+      width: 50%;
+   }
+
    .invitation{
       flex-direction: column;
+   }
+
+   .invitation__text > h2{
+      text-align: center;
+   }
+
+   .invitation__text > p{
+      max-width: 100%;
+   }
+
+   .invitation__text > ul{
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .invitation__text > ul > li{
+      width: 80%;
+   }
+
+   .invitation__text > ul > li::before{
+      height: 1.5em;
+   }
+
+   .invitation__text > a{
+      display: block;
+      
+      width: 70%;
+      margin-inline: auto;
+      margin-bottom: 1.5em;
+   }
+
+   .invitation__cards > ul{
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .invitation__cards > ul > li{
+      width: 75%;
+
+      text-align: center;
    }
 
    .lead-capture{
